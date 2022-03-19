@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Open+Sans:ital@0;1&family=Oswald:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+/*******************************/
+
+/*Botao padra*/
+.button{
+    border: 2px solid #333;
+    border-radius: 5px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-family: 'Montserrat';
+}
+.button:hover{
+    background-color: #333;
+    color: #fff;
+    border-radius: 0;
+}
+/*******************************/
+
+/*HEADER...*/
+header .line{
+    background-color: rgb(50, 110, 82);
+    height: 10px;
+}
+/*checkbox botao menu*/
+#check{
+    display: none;
+}
+#img-menu{
+    cursor: pointer;
+}
+/*definicao do espacamento cabecalho*/
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 1140px;
+    padding: 14px;
+}
+/*campo de busca do cabecalho*/
+.search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+    background-color: #fff;
+    width: 258px;
+    height: 36px;
+    margin-right: 60px;
+    border: 1px solid #999;
+}
+.search #check-busca{
+    width: 230px;
+    border: none;
+    height: inherit; 
+    font-size: 18px;  
+    padding-left: 10px;
+}
+/*estilo campo de busca*/
+.search #check-busca::placeholder{
+    font-size: 18px;
+}
+.search #check-busca:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+.header--dir{
+    display: flex;
+    align-items: center;
+}
+.search img{
+    cursor: pointer;
+}
+/*Menu-dropdown*/
+.dropdown{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .9);
+    left: -100%;
+    transition: all .5s;
+}
+#check:checked ~ .dropdown{
+    left: 0;
+}
+
+/*******************************/
+
+/*MAIN Section 01*/
+.section-01{ 
+    height: calc(100vh);
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-position: top;
+}
+.section-01-info{
+    max-width: 1140px;
+    margin: auto;
+}
+.section-01--title{
+    width: 533px;
+    flex-wrap: wrap;
+    padding-bottom: 70px;
+    padding-top: 100px;
+}
+.section-01--title h1{
+    font-family: 'Oswald';
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 105px;
+    padding-bottom: 40px;
+    margin-left: 20px; 
+}
+.section-01--title p{
+    margin-left: 20px;
+}
+.section--img{
+    display: inline-block;
+    border-radius: 90px;
+    border: 7px solid rgb(50, 110, 82);
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.section--img img{
+    width: inherit;
+    height: inherit;
+    border-radius: 90px;
+}
+/*CAMPO PADRAO / SECTION 1 2 3*/
+.info{
+    width: 450px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    margin: auto;
+}
+.info h1{
+    font-family: 'Oswald';
+    font-size: 40px;
+    line-height: 45px;
+}
+.info p{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.info #paragrafo{
+    padding-bottom: 30px;
+    
+}
+.info--bar{
+    width: 168px;
+    height: 22px;
+    background-color: rgb(50, 110, 82);
+    margin-top: 60px;
+    margin-bottom: 25px;
+}
+/*******************************/
+/*MAIN Section 02*/
+.section-02{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.section-02--info{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.section-02--img01{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.section-02--img02{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.section-02--img01 img, .section-02--img02 img, .section-02--info{
+    width: 100%;
+    height: 100%;
+}
+/*******************************/
+/*Section 03*/
+.section-03{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.section-03--info{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+   
+}
+.section-03--img01{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;   
+}
+.section-03--img02{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.section-03--img01 img, .section-03--img02 img, .section-03--info{
+    width: 100%;
+    height: 100%;
+}
+/*******************************/
+/*Section 04*/
+.section-04{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+.section-04--info{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-image: url(../images/bg2.jpg);
+    background-size: cover;
+    
+}
+.section-04--img01{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.section-04--img01 img, .section-04--info{
+    width: 100%;
+    height: 100%;
+}
+.section-04 .info{
+    margin-top: 200px;
+    width: 400px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.section-04 .info h1{
+    font-weight: 400;
+}
+
+/*******************************/
+
+/*Section 05*/
+.section-05{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+.section-05--info{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: rgb(232, 233, 238);
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-bottom: 200px;
+
+}
+.section-05--img01{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.section-05--img01 img, .section-05--info{
+    width: 100%;
+    height: 100%;
+}
+.section-05 .info{
+    margin-top: 200px;
+    width: 340px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    margin-right: 0;    
+}
+/*******************************/
+/*Section 06*/
+.section-06{
+    background-color: rgb(232, 233, 238);
+   
+}
+.section-06--image img{
+    width: 100%;
+}
+.section-06--image{
+    width: 1140px;
+    margin: auto;
+}
+/*******************************/
+/*footer*/
+.footer-desc, .footer-corp{
+    background-color: rgb(51, 51, 51);
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+}
+.footer-corp a{
+    color: rgb(185, 241, 218);
+
+}
+.footer-corp a:hover{
+    text-decoration: none;
+    color: #fff;
+}
+/*responssividade*/
+@media(max-width: 800px){
+
+/*header--cabecalho*/   
+    .header #logo{
+        width: 55px;
+        height: 55px;
+    }
+    .header{
+        padding: 10px;
+    }
+/*section--1*/  
+    .section-01--title{
+        width: 343px;
+        padding-bottom: 40px;
+        padding-top: 80px;
+    }
+    .section-01--title h1{
+        font-size: 67px;
+        line-height: 65px;
+        padding-bottom: 80px;
+        margin-left: 20px; 
+    }
+   
+    .section--img{
+        display: inline-block;
+        width: 120px;
+        height: 120px;
+        margin-top: 150px;
+    }
+ 
+/*section--2*/
+.section-02,
+.section-03{
+    display: grid;
+    grid-template-areas: 
+        "info"
+        "img1"
+        "img2"
+    ;
+    
+}
+.section-04,
+.section-05{
+    display: grid;
+    grid-template-areas: 
+        "info "
+        "img1 "
+    ;
+    
+}
+.section-02--info,
+.section-03--info,
+.section-04--info,
+.section-05--info{
+    grid-area: info;
+    margin-bottom: 80px;
+    width: 100vw;
+}
+.section-02--img01,
+.section-03--img01,
+.section-04--img01,
+.section-05--img01{
+    grid-area: img1;
+    width: 100vw;
+}
+.section-02--img02,
+.section-03--img02{
+    grid-area: img2;
+    width: 100vw;
+}
+
+/*CAMPO PADRAO / SECTION 2 3*/
+
+.info{
+    flex-wrap: wrap;
+    margin-bottom: 0px;
+    margin: auto;
+}
+.info h1{
+    font-size: 30px;
+}
+.info p{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.info #paragrafo{
+    padding-bottom: 20px;
+}
+.section-04 .info{
+    margin-top: 200px;
+    margin-bottom: 30px;
+}
+.section-05 .info{
+    flex-wrap: wrap; 
+    margin: auto;
+}
+
+.section-06--image{
+    width: 100vw;
+    margin: auto;
+}
+}
